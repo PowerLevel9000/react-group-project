@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import logo from '../media/logo.png';
 
 const Navigation = () => (
@@ -9,10 +10,10 @@ const Navigation = () => (
       <h2>Space Traveller&apos;s Hub</h2>
     </div>
     <ul className="menu">
-      <li>Rockets</li>
-      <li>Missons</li>
+      <Link to="/"><li>Rockets</li></Link>
+      <Link to="/missions"><li>Missons</li></Link>
       <div className="line" />
-      <li>MyProfile</li>
+      <Link to="/profile"><li>MyProfile</li></Link>
     </ul>
   </NavWrapper>
 );
