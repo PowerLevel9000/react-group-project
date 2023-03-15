@@ -1,32 +1,31 @@
-/* eslint-disable */
-
-import React from 'react';
-import { getMissions } from '../redux/missions/missonSlice';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RotatingLines } from 'react-loader-spinner';
+import { getMissions } from '../redux/missions/missonSlice';
 
 const Missions = () => {
   const { mission: { missions: mission, isLoading: loading } } = useSelector((store) => store);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
-  console.log(mission, loading);
-  const missionComponents = mission.map((mission) =>
-    <div>
+  }, []); // we don't need dependency array
+  console.log(mission, loading); // this console logs are important
+  const missionComponents = mission.map((mission) => (
+    <div key={mission.mission_id}>
       <h4>{mission.mission_name}</h4>
       <p>{mission.description}</p>
     </div>
-  )
-  console.log(missionComponents)
+  ));
+  console.log(missionComponents); // this console logs are important
   return (
     <div>
       {loading ? (
         <div className="loader">
-          <RotatingLines strokeColor="grey"
+          <RotatingLines
+            strokeColor="grey"
             strokeWidth="5"
-            animationDuration="0.75" />
+            animationDuration="0.75"
+          />
         </div>
       ) : (
         <>
@@ -36,7 +35,7 @@ const Missions = () => {
       )}
 
     </div>
-  )
+  );
 };
 
 export default Missions;

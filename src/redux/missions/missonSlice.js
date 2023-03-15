@@ -24,7 +24,7 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     addMission: (state, action) => {
-      console.log('hello from addMissions', state, action);
+      console.log('hello from addMissions', state, action); // this console.log is importent for tracking
     },
   },
 
