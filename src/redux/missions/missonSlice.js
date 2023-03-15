@@ -23,7 +23,7 @@ const missionSlice = createSlice({
   name: 'missionState',
   initialState,
   reducers: {
-    addMission: (state, action) => {
+    reserveMission: (state, action) => {
       console.log('hello from addMissions', state, action); // this console.log is importent for tracking
     },
   },
@@ -44,6 +44,7 @@ const missionSlice = createSlice({
         mission_id: mission.mission_id,
         mission_name: mission.mission_name,
         description: mission.description,
+        isReserved: false,
       }));
       return {
         ...state,
