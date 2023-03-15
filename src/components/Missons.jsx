@@ -14,7 +14,10 @@ const Missions = () => {
   },[]);
   console.log(mission);
   const missionComponents = mission.map((mission)=>
-    <p>{mission.description}</p>
+    <div>
+      <h4>{mission.mission_name}</h4>
+      <p>{mission.description}</p>
+    </div>
   )
   console.log(missionComponents)
   return (
