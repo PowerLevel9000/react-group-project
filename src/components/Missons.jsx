@@ -18,7 +18,7 @@ const Missions = () => {
   ));
   console.log(missionComponents); // this console logs are important
   return (
-    <div>
+    <div data-testid="missions">
       {loading ? (
         <div className="loader">
           <RotatingLines
@@ -29,7 +29,6 @@ const Missions = () => {
         </div>
       ) : (
         <>
-          <h1>Hello from missions</h1>
           {missionComponents}
         </>
       )}
