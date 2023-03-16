@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import MissonReserve from './profileComponent/MissonReserve';
 
 const Profile = () => (
-  <DivWrapper>
+  <DivWrapper data-testid="Profile">
     <MissonReserve />
     <div><h4>My Rockets</h4></div>
   </DivWrapper>
