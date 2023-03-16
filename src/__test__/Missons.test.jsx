@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import Missions from '../components/Missons';
 import configureStore from 'redux-mock-store';
+import Missions from '../components/Missons';
 
 describe('Missions testing: "features and components"', () => {
   const mockStore = configureStore([]);
@@ -11,8 +11,8 @@ describe('Missions testing: "features and components"', () => {
         { id: 1, name: 'Mission 1' },
         { id: 2, name: 'Mission 2' },
         { id: 3, name: 'Mission 3' },
-      ]
-    }
+      ],
+    },
   };
   let store;
 
@@ -27,7 +27,7 @@ describe('Missions testing: "features and components"', () => {
       </Provider>,
     );
     const missionRows = screen.getAllByRole('row');
-    // since one is for heading 
+    // since one is for heading
     expect(missionRows.length).toBe(initialState.mission.missions.length + 1);
   });
   test('is Missions container rendering', () => {
