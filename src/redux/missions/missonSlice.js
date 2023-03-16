@@ -35,7 +35,6 @@ const missionSlice = createSlice({
       } else {
         mission.isReserved = true;
       }
-      console.log('Found mission:', { ...mission });
     },
   },
 
