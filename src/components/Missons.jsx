@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RotatingLines } from 'react-loader-spinner';
-import { getMissions, toggleMission } from '../redux/missions/missonSlice';
+import { toggleMission } from '../redux/missions/missonSlice';
 
 const Missions = () => {
   const { mission: { missions: mission, isLoading: loading } } = useSelector((store) => store);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getMissions());
-    // eslint-disable-next-line
-  }, []); // we don't need dependency array
   const missionComponents = mission.map((mission) => (
     <div key={mission.mission_id}>
       <span>{mission.isReserved && 'reserved'}</span>
