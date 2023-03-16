@@ -6,8 +6,7 @@ const Profile = () => {
   const reservedMissionComponent = missions.filter((mission) => mission.isReserved)
     .map((mission) => (
       <div key={mission.mission_id}>
-        <h1>{mission.mission_name}</h1>
-        <p>{mission.description}</p>
+        <h4>{mission.mission_name}</h4>
       </div>
     ));
   return (
