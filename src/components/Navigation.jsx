@@ -33,7 +33,7 @@ const NavWrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    width: 300px;
+    width: 375px;
   }
 
   .line {
