@@ -6,6 +6,7 @@ const url = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   missions: [],
+  reservemission: [],
   isLoading: false,
 };
 
@@ -23,8 +24,18 @@ const missionSlice = createSlice({
   name: 'missionState',
   initialState,
   reducers: {
-    addMission: (state, action) => {
-      console.log('hello from addMissions', state, action); // this console.log is importent for tracking
+    toggleMission: (state, action) => {
+      const missionId = action.payload;
+      // console.log('Current state:', state);
+      // console.log('Mission ID:', missionId);
+      // console.log('First mission:', { ...state.missions[0] });
+      const mission = state.missions.find((mission) => mission.mission_id === missionId);
+      // console.log('Found mission:', { ...mission });
+      if (mission.isReserved) {
+        mission.isReserved = false;
+      } else {
+        mission.isReserved = true;
+      }
     },
   },
 
@@ -44,6 +55,7 @@ const missionSlice = createSlice({
         mission_id: mission.mission_id,
         mission_name: mission.mission_name,
         description: mission.description,
+        isReserved: false,
       }));
       return {
         ...state,
@@ -54,4 +66,5 @@ const missionSlice = createSlice({
   },
 });
 
+export const { toggleMission } = missionSlice.actions;
 export default missionSlice.reducer;
