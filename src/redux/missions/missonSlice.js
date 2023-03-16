@@ -1,5 +1,3 @@
-/* eslint-disable */ 
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url = 'https://api.spacexdata.com/v3/missions';
@@ -34,8 +32,8 @@ const missionSlice = createSlice({
       // console.log('Found mission:', { ...mission });
       if (mission.isReserved) {
         mission.isReserved = false;
-      }else {
-        mission.isReserved = true
+      } else {
+        mission.isReserved = true;
       }
       console.log('Found mission:', { ...mission });
     },
