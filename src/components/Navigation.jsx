@@ -13,7 +13,7 @@ const Navigation = () => (
       <Link to="/"><li>Rockets</li></Link>
       <Link to="/missions"><li>Missons</li></Link>
       <div className="line" />
-      <Link to="/my-profile"><li>MyProfile</li></Link>
+      <Link to="/profile"><li>MyProfile</li></Link>
     </ul>
   </NavWrapper>
 );
