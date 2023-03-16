@@ -16,7 +16,7 @@ const Missions = () => {
     </tr>
   ));
   return (
-    <div>
+    <div data-testid="missions">
       {loading ? (
         <div className="loader">
           <RotatingLines
