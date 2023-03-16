@@ -1,9 +1,11 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Rockets from './components/Rockets';
 import Profile from './components/Profile';
 import Missions from './components/Missons';
+import Rockets from './components/Rockets';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
