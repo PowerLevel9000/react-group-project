@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RotatingLines } from 'react-loader-spinner';
-import { getMissions, reserveMission } from '../redux/missions/missonSlice';
+import { getMissions, toggleMission } from '../redux/missions/missonSlice';
 
 const Missions = () => {
   const { mission: { missions: mission, isLoading: loading } } = useSelector((store) => store);
@@ -15,7 +15,7 @@ const Missions = () => {
       <span>{mission.isReserved && 'reserved'}</span>
       <h4>{mission.mission_name}</h4>
       <p>{mission.description}</p>
-      <button onClick={() => dispatch(reserveMission(mission.mission_id))} type="button">{mission.isReserved ? 'cancel' : 'join'}</button>
+      <button onClick={() => dispatch(toggleMission(mission.mission_id))} type="button">{mission.isReserved ? 'cancel' : 'join'}</button>
     </div>
   ));
   // console.log(missionComponents); // this console logs are important

@@ -25,7 +25,7 @@ const missionSlice = createSlice({
   name: 'missionState',
   initialState,
   reducers: {
-    reserveMission: (state, action) => {
+    toggleMission: (state, action) => {
       const missionId = action.payload;
       // console.log('Current state:', state);
       // console.log('Mission ID:', missionId);
@@ -68,5 +68,5 @@ const missionSlice = createSlice({
   },
 });
 
-export const { reserveMission } = missionSlice.actions;
+export const { toggleMission } = missionSlice.actions;
 export default missionSlice.reducer;
