@@ -32,10 +32,12 @@ const missionSlice = createSlice({
       // console.log('First mission:', { ...state.missions[0] });
       const mission = state.missions.find((mission) => mission.mission_id === missionId);
       // console.log('Found mission:', { ...mission });
-      if (mission) {
-        mission.isReserved = true;
+      if (mission.isReserved) {
+        mission.isReserved = false;
+      }else {
+        mission.isReserved = true
       }
-      // console.log('Found mission:', { ...mission });
+      console.log('Found mission:', { ...mission });
     },
   },
 

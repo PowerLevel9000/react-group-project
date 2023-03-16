@@ -12,9 +12,10 @@ const Missions = () => {
   // console.log(mission, loading); // this console logs are important
   const missionComponents = mission.map((mission) => (
     <div key={mission.mission_id}>
+      <span>{mission.isReserved && 'reserved'}</span>
       <h4>{mission.mission_name}</h4>
       <p>{mission.description}</p>
-      <button onClick={() => dispatch(reserveMission(mission.mission_id))} type="button">join</button>
+      <button onClick={() => dispatch(reserveMission(mission.mission_id))} type="button">{mission.isReserved ? 'cancel' : 'join'}</button>
     </div>
   ));
   // console.log(missionComponents); // this console logs are important
