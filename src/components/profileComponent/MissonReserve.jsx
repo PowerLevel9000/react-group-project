@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
+// import MissionWrapper from './MissionWrapper.Jsx';
 
 const MissonReserve = () => {
   const { mission: { missions } } = useSelector((store) => store);
@@ -16,6 +17,27 @@ const MissonReserve = () => {
           reservedMissionComponent.length ? reservedMissionComponent : (
             <h4>
               you don&apos;t have any mission
+            </h4>
+          )
+        }
+      </div>
+    </MissionWrapper>
+  );
+};
+const RocketReserve = () => {
+  const { rocketLists } = useSelector((state) => state.rockets);
+  const reserveRockets = rocketLists.filter((rocket) => rocket.reserved && rocket)
+    .map((rocket) => (
+      <h4 key={rocket.id}>{rocket.name}</h4>
+    ));
+  return (
+    <MissionWrapper>
+      <h3>My Rocket</h3>
+      <div>
+        {
+          reserveRockets.length ? reserveRockets : (
+            <h4>
+              you don&apos;t have any reserved rocket
             </h4>
           )
         }
@@ -45,4 +67,4 @@ const MissionWrapper = styled.div`
   }
 `;
 
-export default MissonReserve;
+export { MissonReserve, RocketReserve };

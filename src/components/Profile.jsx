@@ -1,11 +1,13 @@
+/* eslint-disable */
+
 import React from 'react';
 import styled from 'styled-components';
-import MissonReserve from './profileComponent/MissonReserve';
+import {MissonReserve, RocketReserve} from './profileComponent/MissonReserve';
 
 const Profile = () => (
   <DivWrapper data-testid="Profile">
     <MissonReserve />
-    <div><h4>My Rockets</h4></div>
+    <RocketReserve />
   </DivWrapper>
 );
 

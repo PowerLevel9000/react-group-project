@@ -8,7 +8,6 @@ const MyProfile = () => {
 
   return (
     <div className={styles.container}>
-      <div />
       <div className={styles.rocket}>
         <h2>My Rockets</h2>
         <table className={styles.table}>
