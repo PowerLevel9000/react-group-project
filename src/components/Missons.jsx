@@ -77,6 +77,7 @@ const TableWrapper = styled.table`
   td:nth-of-type(4) {
     width: 10%;
     text-align: center;
+    min-width: 120px;
   }
 
   tr {
