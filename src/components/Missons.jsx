@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RotatingLines } from 'react-loader-spinner';
-import { getMissions } from '../redux/missions/missonSlice';
+import { getMissions, reserveMission } from '../redux/missions/missonSlice';
 
 const Missions = () => {
   const { mission: { missions: mission, isLoading: loading } } = useSelector((store) => store);
@@ -9,14 +9,15 @@ const Missions = () => {
   useEffect(() => {
     dispatch(getMissions());
   }, []); // we don't need dependency array
-  console.log(mission, loading); // this console logs are important
+  // console.log(mission, loading); // this console logs are important
   const missionComponents = mission.map((mission) => (
     <div key={mission.mission_id}>
       <h4>{mission.mission_name}</h4>
       <p>{mission.description}</p>
+      <button onClick={() => dispatch(reserveMission(mission.mission_id))} type="button">join</button>
     </div>
   ));
-  console.log(missionComponents); // this console logs are important
+  // console.log(missionComponents); // this console logs are important
   return (
     <div>
       {loading ? (
@@ -29,7 +30,6 @@ const Missions = () => {
         </div>
       ) : (
         <>
-          <h1>Hello from missions</h1>
           {missionComponents}
         </>
       )}

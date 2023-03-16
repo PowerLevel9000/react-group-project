@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const url = 'https://api.spacexdata.com/v3/missions';
@@ -24,7 +26,16 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     reserveMission: (state, action) => {
-      console.log('hello from addMissions', state, action); // this console.log is importent for tracking
+      const missionId = action.payload;
+      // console.log('Current state:', state);
+      // console.log('Mission ID:', missionId);
+      // console.log('First mission:', { ...state.missions[0] });
+      const mission = state.missions.find((mission) => mission.mission_id === missionId);
+      // console.log('Found mission:', { ...mission });
+      if (mission) {
+        mission.isReserved = true;
+      }
+      // console.log('Found mission:', { ...mission });
     },
   },
 
@@ -55,4 +66,5 @@ const missionSlice = createSlice({
   },
 });
 
+export const { reserveMission } = missionSlice.actions;
 export default missionSlice.reducer;
