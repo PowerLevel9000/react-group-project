@@ -11,8 +11,8 @@ const Missions = () => {
     <tr key={mission.mission_id}>
       <th>{mission.mission_name}</th>
       <td>{mission.description}</td>
-      <td>{ mission.isReserved ? <span className="active">Active Member</span> : <span className="active nam">Not A Member</span> }</td>
-      <td><button onClick={() => dispatch(toggleMission(mission.mission_id))} type="button">{mission.isReserved ? 'Leave Mission' : 'Join Mission'}</button></td>
+      <td>{mission.isReserved ? <span className="active">Active Member</span> : <span className="active nam">Not A Member</span>}</td>
+      <td>{mission.isReserved ? <button className="leave" onClick={() => dispatch(toggleMission(mission.mission_id))} type="button">Leave Mission</button> : <button onClick={() => dispatch(toggleMission(mission.mission_id))} type="button">Join Mission</button>}</td>
     </tr>
   ));
   return (
@@ -28,10 +28,10 @@ const Missions = () => {
       ) : (
         <TableWrapper>
           <tr>
-            <th>mission</th>
-            <th>discription</th>
-            <th>status</th>
-            <th>buttons</th>
+            <th>Mission</th>
+            <th>Discription</th>
+            <th>Status</th>
+            <th>Action</th>
           </tr>
           {missionComponents}
         </TableWrapper>
@@ -53,6 +53,7 @@ const TableWrapper = styled.table`
   }
 
   th:first-of-type {
+    text-align: left;
     border-left : none;
   }
 
@@ -99,6 +100,18 @@ const TableWrapper = styled.table`
 
   .nam {
     background: #777;
+  }
+
+  button {
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #666;
+    padding: .4rem .5rem
+  }
+
+  .leave {
+    border-color: #ff0000;
+    color: #f50000;
   }
 `;
 
