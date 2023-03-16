@@ -12,7 +12,13 @@ const MissonReserve = () => {
     <MissionWrapper>
       <h3>My Missons</h3>
       <div>
-        {reservedMissionComponent}
+        {
+          reservedMissionComponent.length ? reservedMissionComponent : (
+            <h4>
+              you don&apos;t have any mission
+            </h4>
+          )
+        }
       </div>
     </MissionWrapper>
   );
