@@ -1,15 +1,15 @@
 <a name="readme-top"></a>
 <div align="center">
   <img src="./src/media/adarsh-logo/my-logo.png" alt="logo" width="140"  height="auto" />
-  <img src="./src/media/martin-logo/my-logo.png" alt="logo" width="140"  height="auto" />
-
+  <img src="./src/media/habtamu-logo/my-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
-  <h1><b>Pokemon Dashboard</b><br><br></h1>
+  <h1><b>Space Hub</b><br><br></h1>
   
  </div>
 
 <div align="center">
   <h1>App Mock</h1>
+  <!-- this will be replace by actual mock when we got approved  -->
   <img src="./src/media/app-mocks/all-devices-black.png" alt="logo" width="100%"  height="auto" />
 </div>
 <br>
@@ -41,11 +41,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Pokemon Dashboard <a name="about-project"></a>
+# 📖 Space  hub <a name="about-project"></a>
 
-> This Project is a pokemon social meadia
+> This Project is a for space traveliing or kinda like fictional game action
 
-**Awesome Books** is a JavaScript and API-based project
+**Space hub** is a React oriented  and API-based project
 
 <br>
 
@@ -72,14 +72,13 @@
 <details>
 <summary>Dynamics And Logics</summary>
   <ul>
-    <li><a href="https://www.javascript.com">JavaScript</a></li>
+    <li><a href="https://www.react.org">React</a></li>
   </ul>
 </details>
 <details>
 <summary>API involved</summary>
   <ul>
-    <li><a href="https://pokeapi.co/"></a>Pokemon API</li>
-    <li><a href="https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270">Involement API</a></li>
+    <li><a href=""></a>Space-x API</li>
   </ul>
 </details>
 
@@ -92,11 +91,9 @@
 
 > Following features you should observe
 
-- **You can check your pokemon**
-- **you can add likes for your fav pokemon**
-- **you can add comments for your fav pokemon**
-- **Nice animation and popup**
-
+- **You can  join your missions**
+- **You can  reserve your rockets**
+- **you can check what mission you have and respective rockets**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,8 +103,7 @@
 
 > This link will guide you to my project
 
-- [Live Demo Link](https://martinkarugaba.github.io/pokemon-dashboard/dist/)
-- [Loom Video](https://www.loom.com/share/c97562d2fb964f129f4151ee5d42b9a7)
+under construction
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,23 +177,22 @@ You can deploy this project using:
 - Twitter: [@PowerLevel9002](https://twitter.com/PowerLevel9002?t=AIuSN7mTxk5a_MWpLolEjA&s=09)
 - LinkedIn: [@Adarsh Pathak](https://www.linkedin.com/in/adarsh-pathak-56a831256/)
 
-👤 **Martin Karugaba**
+👤 **Habtamu**
 
-- GitHub: [@martinkarugaba](https://github.com/martinkarugaba)
-- Twitter: [@martin_karugaba](https://twitter.com/martin_karugaba)
-- LinkedIn: [@martin_karugaba](https://www.linkedin.com/in/martin-karugaba-822442173/)
+- GitHub: [@Habtamu210](https://github.com/Habtamu210)
+- Twitter: [@beleyaha](https://twitter.com/beleyaha)
+- LinkedIn: [@habtamu-](https://www.linkedin.com/in/habtamu-birru/)
 
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> Describe 1 - 3 features that will add to the project.
 
 - [ ] **mobile and tablet version**
 - [ ] **improve functionality**
 - [ ] **improve styling**
-- [ ] **infinite scroll**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -207,7 +202,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/martinkarugaba/pokemon-dashboard/issues)).
+Feel free to check the [issues page](https://github.com/PowerLevel9000/react-group-project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,17 +216,7 @@ If you like my Project give it a Star ✨🌟
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ❓ FAQ <a name="faq"></a>
 
-> ask questions to be here 
-
-- **Question_1** How to close pop up
-
-  - Answer_1 Click outside the popup or cross button
-
-- **Question_2** How to add like 
-
-  - Answer_2 Just Tap on the heart button and wait for awhile
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -239,8 +224,7 @@ If you like my Project give it a Star ✨🌟
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/martinkarugaba/pokemon-dashboard/blob/master/MIT.md) licensed.
+This project is [MIT](https://github.com/PowerLevel9000/react-group-project/blob/Documentation/LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
