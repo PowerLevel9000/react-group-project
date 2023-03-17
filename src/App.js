@@ -13,8 +13,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMissions());
-    // eslint-disable-next-line
-  }, []); // we don't need dependency array
+  }, [dispatch]);
   return (
     <BrowserRouter>
       <Navigation />

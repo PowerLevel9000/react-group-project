@@ -12,13 +12,11 @@ const Navigation = () => {
 
   return (
     <NavWrapper>
-      {/* AS i want intractive role for this ul and its imp for testing so i disable this  */}
-      {/* eslint-disable  */}
       <div role="menuitem" className="logo-wrapper">
         <Link to="/"><img src={logo} alt="" /></Link>
         <Link to="/"><h2>Space Traveller&apos;s Hub</h2></Link>
       </div>
-      <ul role="menuitem" className="menu">
+      <ul role="listbox" className="menu">
         <Link to="/" onClick={() => handleLinkClick('rockets')}>
           <li role="list" className={activeLink === 'rockets' ? 'active' : ''}>
             Rockets

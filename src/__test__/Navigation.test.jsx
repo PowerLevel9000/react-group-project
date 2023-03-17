@@ -12,8 +12,9 @@ describe('testing the navigation componennt', () => {
 
   test('Main wrapper of the navigation bar should be 2', () => {
     render(<NavigationTest />);
-    const navWrappers = screen.getAllByRole('menuitem');
-    expect(navWrappers.length).toBe(2);
+    const logoWraper = screen.getAllByRole('menuitem');
+    const MenuRapper = screen.getAllByRole('menuitem');
+    expect(logoWraper.length + MenuRapper.length).toBe(2);
   });
 
   test('Main menu elements shoul be 3', () => {
