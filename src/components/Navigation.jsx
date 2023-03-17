@@ -5,15 +5,17 @@ import logo from '../media/logo.png';
 
 const Navigation = () => (
   <NavWrapper>
-    <div className="logo-wrapper">
+    <div role="menuitem" className="logo-wrapper">
       <img src={logo} alt="" />
       <h2>Space Traveller&apos;s Hub</h2>
     </div>
-    <ul className="menu">
-      <Link to="/"><li>Rockets</li></Link>
-      <Link to="/missions"><li>Missons</li></Link>
+    {/* AS i want intractive role for this ul and its imp for testing so i disable this  */}
+    {/* eslint-disable  */}
+    <ul role="menuitem" className="menu">
+      <Link to="/"><li role="list">Rockets</li></Link>
+      <Link to="/missions"><li role="list">Missons</li></Link>
       <div className="line" />
-      <Link to="/profile"><li>MyProfile</li></Link>
+      <Link to="/profile"><li role="list">MyProfile</li></Link>
     </ul>
   </NavWrapper>
 );
