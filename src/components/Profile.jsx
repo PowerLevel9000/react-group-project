@@ -14,8 +14,9 @@ const DivWrapper = styled.div`
   width: 80%;
   margin: 3rem auto;
   justify-content: space-between;
+  gap: 6rem;
   div {
-    width: 45%;
+    width: 100%;
   }
 `;
 
