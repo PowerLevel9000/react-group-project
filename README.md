@@ -103,7 +103,7 @@
 
 > This link will guide you to my project
 
-under construction
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b8d43722-f03c-4861-8a1f-e78b089d5f8c/deploy-status)](https://space-hub-mission.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
