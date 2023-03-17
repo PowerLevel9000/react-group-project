@@ -1,47 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../media/logo.png';
 
-const Navigation = () => (
-  <NavWrapper>
-    <div role="menuitem" className="logo-wrapper">
-      <img src={logo} alt="" />
-      <h2>Space Traveller&apos;s Hub</h2>
-    </div>
-    {/* AS i want intractive role for this ul and its imp for testing so i disable this  */}
-    {/* eslint-disable  */}
-    <ul role="menuitem" className="menu">
-      <Link to="/"><li role="list">Rockets</li></Link>
-      <Link to="/missions"><li role="list">Missons</li></Link>
-      <div className="line" />
-      <Link to="/profile"><li role="list">MyProfile</li></Link>
-    </ul>
-  </NavWrapper>
-);
+const Navigation = () => {
+  const [activeLink, setActiveLink] = useState('rockets');
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  return (
+    <NavWrapper>
+      {/* AS i want intractive role for this ul and its imp for testing so i disable this  */}
+      {/* eslint-disable  */}
+      <div role="menuitem" className="logo-wrapper">
+        <Link to="/"><img src={logo} alt="" /></Link>
+        <Link to="/"><h2>Space Traveller&apos;s Hub</h2></Link>
+      </div>
+      <ul role="menuitem" className="menu">
+        <Link to="/" onClick={() => handleLinkClick('rockets')}>
+          <li role="list" className={activeLink === 'rockets' ? 'active' : ''}>
+            Rockets
+          </li>
+        </Link>
+        <Link to="/missions" onClick={() => handleLinkClick('missions')}>
+          <li role="list" className={activeLink === 'missions' ? 'active' : ''}>
+            Missions
+          </li>
+        </Link>
+        <div className="line" />
+        <Link to="/profile" onClick={() => handleLinkClick('profile')}>
+          <li role="list" className={activeLink === 'profile' ? 'active' : ''}>
+            MyProfile
+          </li>
+        </Link>
+      </ul>
+    </NavWrapper>
+  );
+};
 
 const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   flex-wrap: wrap;
   img {
     height: 3rem;
   }
 
-  .logo-wrapper{
+  .logo-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    width: 375px;
+    width: 300px;
   }
 
   .line {
     width: 1px;
     height: 20px;
-    background-color: black;
+    background-color: blue;
     transform: rotate(0deg);
   }
 
@@ -52,6 +73,26 @@ const NavWrapper = styled.nav`
     flex-wrap: wrap;
     list-style-type: none;
     max-width: 300px;
+
+    li {
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    li.active:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: blue;
+    }
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
   }
 `;
 
