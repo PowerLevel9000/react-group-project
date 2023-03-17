@@ -9,8 +9,8 @@
 
 <div align="center">
   <h1>App Mock</h1>
-  <!-- this will be replace by actual mock when we got approved  -->
   <img src="./src/media/app-mocks/all-devices-black.png" alt="logo" width="100%"  height="auto" />
+  <img src="./src/media/app-mocks/desktop.png" alt="logo" width="100%"  height="auto" />
 </div>
 <br>
 <br>
@@ -72,7 +72,7 @@
 <details>
 <summary>Dynamics And Logics</summary>
   <ul>
-    <li><a href="https://www.react.org">React</a></li>
+    <li><a href="https://www.reactjs.org">React</a></li>
   </ul>
 </details>
 <details>
