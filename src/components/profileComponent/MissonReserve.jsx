@@ -36,7 +36,7 @@ const RocketReserve = () => {
         {
           reserveRockets.length ? reserveRockets : (
             <h4>
-              you don&apos;t have any reserved rocket
+              you don&apos;t have any rockets
             </h4>
           )
         }

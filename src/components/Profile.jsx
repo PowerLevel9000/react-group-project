@@ -1,8 +1,6 @@
-/* eslint-disable */
-
 import React from 'react';
 import styled from 'styled-components';
-import {MissonReserve, RocketReserve} from './profileComponent/MissonReserve';
+import { MissonReserve, RocketReserve } from './profileComponent/MissonReserve';
 
 const Profile = () => (
   <DivWrapper data-testid="Profile">
