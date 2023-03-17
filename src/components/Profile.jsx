@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import MissonReserve from './profileComponent/MissonReserve';
+import { MissonReserve, RocketReserve } from './profileComponent/MissonReserve';
 
 const Profile = () => (
   <DivWrapper data-testid="Profile">
     <MissonReserve />
-    <div><h4>My Rockets</h4></div>
+    <RocketReserve />
   </DivWrapper>
 );
 
@@ -14,8 +14,9 @@ const DivWrapper = styled.div`
   width: 80%;
   margin: 3rem auto;
   justify-content: space-between;
+  gap: 6rem;
   div {
-    width: 45%;
+    width: 100%;
   }
 `;
 

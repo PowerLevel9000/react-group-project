@@ -13,6 +13,13 @@ describe('is Profile having reserve titles ', () => {
         { id: 3, mission_name: 'Mission 3', isReserved: true },
       ],
     },
+    rockets: {
+      rocketLists: [
+        { id: 1, mission_name: 'Mission 1', reserved: true },
+        { id: 2, mission_name: 'Mission 2', reserved: true },
+        { id: 3, mission_name: 'Mission 3', reserved: true },
+      ],
+    },
   };
   let store;
 
@@ -30,7 +37,7 @@ describe('is Profile having reserve titles ', () => {
     expect(ProfileContainer).toBeInTheDocument();
   });
 
-  test('Reserved missions should render', () => {
+  test('Reserved missions  and Rockets should render', () => {
     render(
       <Provider store={store}>
         <Profile />
@@ -39,6 +46,6 @@ describe('is Profile having reserve titles ', () => {
 
     const ProfileContainer = screen.getAllByRole('heading');
     // two title headers
-    expect(ProfileContainer.length).toBe(4);
+    expect(ProfileContainer.length).toBe(7);
   });
 });

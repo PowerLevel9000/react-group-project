@@ -23,6 +23,27 @@ const MissonReserve = () => {
     </MissionWrapper>
   );
 };
+const RocketReserve = () => {
+  const { rocketLists } = useSelector((store) => store.rockets);
+  const reserveRockets = rocketLists.filter((rocket) => rocket.reserved && rocket)
+    .map((rocket) => (
+      <h4 key={rocket.id}>{rocket.name}</h4>
+    ));
+  return (
+    <MissionWrapper>
+      <h3>My Rocket</h3>
+      <div>
+        {
+          reserveRockets.length ? reserveRockets : (
+            <h4>
+              you don&apos;t have any rockets
+            </h4>
+          )
+        }
+      </div>
+    </MissionWrapper>
+  );
+};
 
 const MissionWrapper = styled.div`
   width: 100%;
@@ -45,4 +66,4 @@ const MissionWrapper = styled.div`
   }
 `;
 
-export default MissonReserve;
+export { MissonReserve, RocketReserve };

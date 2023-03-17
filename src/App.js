@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Navigation from './components/Navigation';
-import Profile from './components/Profile';
 import Missions from './components/Missons';
 import Rockets from './components/Rockets';
 import { getMissions } from './redux/missions/missonSlice';
+import Profile from './components/Profile';
 
 function App() {
   const dispatch = useDispatch();
