@@ -51,7 +51,9 @@ const TableWrapper = styled.table`
     border-top: 1px solid #dddddd;
     padding: 8px;
   }
-
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
   th:first-of-type {
     text-align: left;
     border-left : none;
@@ -81,14 +83,14 @@ const TableWrapper = styled.table`
   }
 
   tr {
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #dddddd; 
+    &:hover{
+      background-color: rgba(252, 160, 160, 0.3);
+    }
+
     &:last-child {
       border-bottom: 1px solid #dddddd;
     }
-  }
-
-  tr:nth-child(even) {
-    background-color: #eee;
   }
 
   .active {

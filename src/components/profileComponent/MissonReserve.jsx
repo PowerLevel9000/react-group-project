@@ -6,7 +6,7 @@ const MissonReserve = () => {
   const { mission: { missions } } = useSelector((store) => store);
   const reservedMissionComponent = missions.filter((mission) => mission.isReserved)
     .map((mission) => (
-      <h4 key={mission.mission_id}>{mission.mission_name}</h4>
+      <h4 className="list" key={mission.mission_id}>{mission.mission_name}</h4>
     ));
   return (
     <MissionWrapper>
@@ -27,7 +27,7 @@ const RocketReserve = () => {
   const { rocketLists } = useSelector((store) => store.rockets);
   const reserveRockets = rocketLists.filter((rocket) => rocket.reserved && rocket)
     .map((rocket) => (
-      <h4 key={rocket.id}>{rocket.name}</h4>
+      <h4 className="list" key={rocket.id}>{rocket.name}</h4>
     ));
   return (
     <MissionWrapper>
@@ -53,11 +53,20 @@ const MissionWrapper = styled.div`
     border-radius: 10px;
     display: flex;
     flex-direction column;
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    &:hover{
+      transform: scale(1.1);
+    }
     h4 {
       color: #555;
       border-bottom: 1px solid black;
       padding: 1rem 1rem;
       margin: 0;
+    }
+
+    .list:hover {
+      background-color: rgba(252, 160, 160, 0.3);
     }
 
     h4:last-of-type {
