@@ -11,6 +11,7 @@ describe('Missions testing: "features and components"', () => {
         { id: 1, name: 'Mission 1' },
         { id: 2, name: 'Mission 2' },
         { id: 3, name: 'Mission 3' },
+        { id: 4, name: 'Mission 4' },
       ],
     },
   };
