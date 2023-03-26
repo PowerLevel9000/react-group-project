@@ -46,6 +46,7 @@
 > This Project is a for space traveliing or kinda like fictional game action
 
 **Space hub** is a React oriented  and API-based project
+This is a React based project , And here you can book various Space mission and there Rockets also have a track of it what missions you have in my profile ,we use Space-x api Rockets and Mission fetching 
 
 <br>
 
@@ -141,8 +142,8 @@ Clone this repository to your desired folder:
 
  Execute the following thing:
  
- - Pokemon dashboard
- - As a pokemon Social Media
+- mission analysis and Joining
+- Rocket Reservation
 
 
 ### Run tests
